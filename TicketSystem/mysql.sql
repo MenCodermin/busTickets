@@ -133,3 +133,94 @@
 -- DELETE FROM Passenger WHERE passenger_id = 2;
 -- INSERT INTO Passenger(fname,lname,contact,email) VALUES('Bilol','Makhmudov','5838889977','bilolmakh@gmail.com');
 -- INSERT INTO Passenger(fname,lname,contact,email) VALUES('Nazar','Oskonbaev','5831112233','nazarosk@gmail.com');
+-- Step 1: Create a new table without the column
+-- CREATE TABLE Schedule (
+--     schedule_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+--     departure_point TEXT NOT NULL,
+--     destination_point TEXT NOT NULL,
+--     travel_date TEXT NOT NULL,
+--     -- Add other columns excluding the column to be deleted
+--     departure_time TEXT NOT NULL,
+--     destination_time TEXT NOT NULL
+-- );
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Famagusta', '2023-06-16', '09:00', '10:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Girne', '2023-06-16', '09:00', '09:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Famagusta', '2023-06-16', '09:00', '09:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Girne', '2023-06-16', '09:00', '10:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Lefcosia', '2023-06-16', '09:00', '09:45');
+
+
+-- -- Step 3: Delete the old table
+-- DROP TABLE Schedule;
+
+-- -- Step 4 (optional): Rename the new table to the original table name
+-- ALTER TABLE Schedule_backup RENAME TO Schedule;
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Lefcosia', '2023-06-16', '12:00', '12:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Famagusta', '2023-06-16', '12:00', '13:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Girne', '2023-06-16', '12:00', '12:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Famagusta', '2023-06-16', '12:00', '12:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Girne', '2023-06-16', '12:00', '13:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Lefcosia', '2023-06-16', '12:00', '12:45');
+
+
+-- SELECT name FROM sqlite_master WHERE type='table';
+-- DELETE FROM Schedule WHERE schedule_id >= 14 AND schedule_id <= 17;
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Lefcosia', '2023-06-16', '15:00', '15:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Famagusta', '2023-06-16', '15:00', '16:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Girne', '2023-06-16', '15:00', '15:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Famagusta', '2023-06-16', '15:00', '15:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Girne', '2023-06-16', '15:00', '16:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Lefcosia', '2023-06-16', '15:00', '15:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Lefcosia', '2023-06-16', '18:00', '18:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Girne', 'Famagusta', '2023-06-16', '18:00', '19:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Girne', '2023-06-16', '18:00', '18:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Lefcosia', 'Famagusta', '2023-06-16', '18:00', '18:45');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Girne', '2023-06-16', '18:00', '19:30');
+
+-- INSERT INTO Schedule (departure_point, destination_point, travel_date, departure_time, destination_time)
+-- VALUES ('Famagusta', 'Lefcosia', '2023-06-16', '18:00', '18:45');
+
+
+SELECT * FROM Schedule;
